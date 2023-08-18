@@ -16,18 +16,16 @@ public class Usuario implements Serializable {
     private String apellidoUsu;
     private String nombreUsuario;
     private String contraseñaUsu;
-    private String tipoDeUsuario;
-
+   
     public Usuario() {
     }
 
-    public Usuario(int id_usuario, String nombreUsu, String apellidoUsu, String nombreUsuario, String contraseñaUsu, String tipoDeUsuario) {
+    public Usuario(int id_usuario, String nombreUsu, String apellidoUsu, String nombreUsuario, String contraseñaUsu) {
         this.id_usuario = id_usuario;
         this.nombreUsu = nombreUsu;
         this.apellidoUsu = apellidoUsu;
         this.nombreUsuario = nombreUsuario;
         this.contraseñaUsu = contraseñaUsu;
-        this.tipoDeUsuario = tipoDeUsuario;
     }
 
     public int getId_usuario() {
@@ -69,13 +67,4 @@ public class Usuario implements Serializable {
     public void setContraseñaUsu(String contraseñaUsu) {
         this.contraseñaUsu = contraseñaUsu;
     }
-
-    public String getTipoDeUsuario() {
-        return tipoDeUsuario;
-    }
-
-    public void setTipoDeUsuario(String tipoDeUsuario) {
-        this.tipoDeUsuario = tipoDeUsuario;
-    }
-
-}
+ }

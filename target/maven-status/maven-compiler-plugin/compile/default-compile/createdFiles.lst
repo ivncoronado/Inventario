@@ -14,11 +14,13 @@ persistencia\exceptions\IllegalOrphanException.class
 servlets\SvUsuario.class
 logica\Consumible.class
 persistencia\ConsumibleJpaController.class
+servlets\SvConsumible.class
 servlets\SvPersonal.class
 logica\Consumible_.class
 logica\Controladora.class
 logica\Usuario_.class
 persistencia\DepartamentoJpaController.class
+servlets\SvEquipo.class
 logica\Personal.class
 logica\Departamento_.class
 logica\entradasSalidas.class

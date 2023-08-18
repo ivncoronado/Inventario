@@ -43,7 +43,7 @@
                 <div id="collapsePersonal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="buttons.html">Ver Personal</a>
+                        <a class="collapse-item" href="SvPersonal">Ver Personal</a>
                         <a class="collapse-item" href="altaPersonal.jsp">Alta Nuevo Personal</a>
                     </div>
                 </div>
@@ -57,8 +57,8 @@
                 <div id="collapseEquipos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="buttons.html">Agregar a inventario</a>
-                        <a class="collapse-item" href="buttons.html">Ver inventario</a>
+                        <a class="collapse-item" href="altaEquipo.jsp">Agregar a inventario</a>
+                        <a class="collapse-item" href="SvEquipo">Ver inventario</a>
                     </div>
                 </div>
             </li>
@@ -74,10 +74,10 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Entradas</a>
-                        <a class="collapse-item" href="utilities-border.html">Reporte de Entradas</a>
-                        <a class="collapse-item" href="utilities-border.html">Salidas</a>
-                        <a class="collapse-item" href="utilities-border.html">Reporte de salidas</a>
+                        <a class="collapse-item" href="altaConsumible.jsp">Entradas</a>
+                        <a class="collapse-item" href="SvConsumible">Reporte de Entradas</a>
+                        <a class="collapse-item" href="altaSalidas.jsp">Salidas</a>
+                        <a class="collapse-item" href="verSalidas.jsp">Reporte de salidas</a>
 
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div id="collapseUsuarios" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="">Ver Usuarios</a>
+                        <a class="collapse-item" href="SvUsuario">Ver Usuarios</a>
                         <a class="collapse-item" href="altaUsuario.jsp">Registrar Nuevo Usuario</a>
                         <a class="collapse-item" href="">Cambiar Contraseña</a>
 

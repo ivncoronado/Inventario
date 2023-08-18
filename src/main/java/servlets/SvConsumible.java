@@ -1,11 +1,15 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import logica.Consumible;
 import logica.Controladora;
 
 
@@ -22,7 +26,15 @@ public class SvConsumible extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        List<Consumible>listaConsumibles = new ArrayList<Consumible>();
+        
+        listaConsumibles = control.getConsumibles();
+        
+        HttpSession misession =request.getSession();
+        misession.setAttribute("listaConnsumibles", listaConsumibles);
+        
+        response.sendRedirect("VerConsumibles");
     }
 
     @Override
@@ -35,7 +47,7 @@ public class SvConsumible extends HttpServlet {
         String tipoConsumible = request.getParameter("tipoConsu");
         
         control.altaCosumible(cantidadConsumible, marcaConsumible, tipoConsumible);
-        
+        response.sendRedirect("index.jsp");
     }
 
     /**

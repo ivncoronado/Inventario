@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.metamodel.SingularAttribute;
 
 @Entity
 public class Equipo implements Serializable {
@@ -13,20 +14,20 @@ public class Equipo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_equipo;
-    private String tipo;
+    private String tipoEquipo;
     private String marcaEquipo;
-    private String modelo;
-    private String serie;
+    private String modeloEquipo;
+    private String serieEquipo;
 
     public Equipo() {
     }
 
-    public Equipo(int id_equipo, String tipo, String marcaEquipo, String modelo, String serie) {
+    public Equipo(int id_equipo, String tipoEquipo, String marcaEquipo, String modeloEquipo, String serieEquipo) {
         this.id_equipo = id_equipo;
-        this.tipo = tipo;
+        this.tipoEquipo = tipoEquipo;
         this.marcaEquipo = marcaEquipo;
-        this.modelo = modelo;
-        this.serie = serie;
+        this.modeloEquipo = modeloEquipo;
+        this.serieEquipo = serieEquipo;
     }
 
     public int getId_equipo() {
@@ -37,12 +38,12 @@ public class Equipo implements Serializable {
         this.id_equipo = id_equipo;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipoEquipo() {
+        return tipoEquipo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoEquipo(String tipoEquipo) {
+        this.tipoEquipo = tipoEquipo;
     }
 
     public String getMarcaEquipo() {
@@ -53,20 +54,20 @@ public class Equipo implements Serializable {
         this.marcaEquipo = marcaEquipo;
     }
 
-    public String getModelo() {
-        return modelo;
+    public String getModeloEquipo() {
+        return modeloEquipo;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setModeloEquipo(String modeloEquipo) {
+        this.modeloEquipo = modeloEquipo;
     }
 
-    public String getSerie() {
-        return serie;
+    public String getSerieEquipo() {
+        return serieEquipo;
     }
 
-    public void setSerie(String serie) {
-        this.serie = serie;
+    public void setSerieEquipo(String serieEquipo) {
+        this.serieEquipo = serieEquipo;
     }
 
 }

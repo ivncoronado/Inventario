@@ -1,12 +1,16 @@
 package servlets;
         
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.Controladora;
+import logica.Personal;
 
 
 
@@ -22,7 +26,14 @@ public class SvPersonal extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        List<Personal>listaPersonal = new ArrayList<Personal>(); 
+                
+        listaPersonal = control.getPersonal();
+        
+        HttpSession misession =request.getSession();
+        misession.setAttribute("listaPersonal", listaPersonal);
+        
+        response.sendRedirect("verPersonal.jsp");
     }
 
     @Override
@@ -35,6 +46,7 @@ public class SvPersonal extends HttpServlet {
         String correoPersonal = request.getParameter("correoPer");
         
         control.crearPersonal(nombrePersonal, apellidoPersonal, departamentoPersonal, correoPersonal);
+        response.sendRedirect("index.jsp");
     }
 
     @Override

@@ -1,12 +1,16 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.Controladora;
+import logica.Usuario;
 
 @WebServlet(name = "SvUsuario", urlPatterns = {"/SvUsuario"})
 public class SvUsuario extends HttpServlet {
@@ -21,7 +25,16 @@ public class SvUsuario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        List<Usuario>listaUsuarios = new ArrayList<Usuario>();
+        
+        listaUsuarios = control.getUsuarios();
+        
+        HttpSession misession =request.getSession();
+        misession.setAttribute("listaUsuarios", listaUsuarios);
+        
+        System.out.println("Usuario" + listaUsuarios.get(0));
+        response.sendRedirect("verUsuarios.jsp");
     }
 
     @Override
@@ -29,13 +42,13 @@ public class SvUsuario extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
 
-        String nombreUsuario = request.getParameter("nombreUsu");
+        String nombreUsuario = request.getParameter("usuarioUsu");
         String apellidoUsuario = request.getParameter("apellidoUsu");
-        String nombreUsu = request.getParameter("usuarioUsu");
+        String nombreUsu = request.getParameter("nombreUsu");
         String contraseniaUsuario = request.getParameter("contrasenia");
         
-        control.crearUsuario(nombreUsu, apellidoUsuario, nombreUsuario, contraseniaUsuario, nombreUsuario);
-
+        control.crearUsuario(nombreUsu, apellidoUsuario, nombreUsuario, contraseniaUsuario);
+        response.sendRedirect("index.jsp");
     }
 
     @Override
