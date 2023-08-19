@@ -6,22 +6,22 @@
 <form class="user" action="SvEquipo"method="POST">
     <div class="form-group col">
         <div class="col-sm-6 mb-3 ">
-            <input type="text" class="form-control form-control-user" id="tipoEqui"
+            <input type="text" class="form-control form-control-user" id="tipoEqui" name="tipoEqui"
                    placeholder="Tipo de equipo">
         </div>
         <div class="col-sm-6 mb-3">
-            <input type="text" class="form-control form-control-user" id="marcaEqui"
+            <input type="text" class="form-control form-control-user" id="marcaEqui" name="marcaEqui"
                    placeholder="Marca del equipo">
         </div>
     <div class="form-group col">
         <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user"
-                   id="modeloEqui" placeholder="Modelo del equipo">
+                   id="modeloEqui" name="modeloEqui" placeholder="Modelo del equipo">
           </div>
         <div class="form-group col">
         <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user"
-                   id="serieEqui" placeholder="Serie del equipo">
+                   id="serieEqui" name="serieEqui" placeholder="Serie del equipo">
           </div>
     <button class="btn btn-primary btn-user btn-block" type="submit">
         Guardar

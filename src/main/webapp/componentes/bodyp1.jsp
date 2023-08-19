@@ -74,10 +74,11 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="altaConsumible.jsp">Entradas</a>
-                        <a class="collapse-item" href="SvConsumible">Reporte de Entradas</a>
+                        <a class="collapse-item" href="SvConsumible">Ver Stock</a>
+                        <a class="collapse-item" href="registroEntrada.jsp">Entradas</a>
+                        <a class="collapse-item" href="verEntradas.jsp">Ver Entradas</a>
                         <a class="collapse-item" href="altaSalidas.jsp">Salidas</a>
-                        <a class="collapse-item" href="verSalidas.jsp">Reporte de salidas</a>
+                        <a class="collapse-item" href="verSalidas.jsp">Ver Salidas</a>
 
                     </div>
                 </div>

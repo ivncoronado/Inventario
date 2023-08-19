@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 package servlets;
 
 import java.io.IOException;
@@ -37,7 +34,7 @@ public class SvEquipo extends HttpServlet {
         HttpSession misession =request.getSession();
         misession.setAttribute("listaEquipos", listaEquipos);
         
-        response.sendRedirect("verEquipos");
+        response.sendRedirect("verEquipos.jsp");
     }
 
     @Override

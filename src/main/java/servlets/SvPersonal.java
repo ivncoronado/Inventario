@@ -1,5 +1,5 @@
 package servlets;
-        
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,9 @@ import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Personal;
 
-
-
 @WebServlet(name = "SvPersonal", urlPatterns = {"/SvPersonal"})
 public class SvPersonal extends HttpServlet {
-    
+
     Controladora control = new Controladora();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -26,13 +24,13 @@ public class SvPersonal extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<Personal>listaPersonal = new ArrayList<Personal>(); 
-                
+        List<Personal> listaPersonal = new ArrayList<Personal>();
+
         listaPersonal = control.getPersonal();
-        
-        HttpSession misession =request.getSession();
+
+        HttpSession misession = request.getSession();
         misession.setAttribute("listaPersonal", listaPersonal);
-        
+
         response.sendRedirect("verPersonal.jsp");
     }
 
@@ -40,11 +38,11 @@ public class SvPersonal extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        String nombrePersonal = request.getParameter("nombrePer");
-        String apellidoPersonal = request.getParameter("apellidoPer");
-        String departamentoPersonal = request.getParameter("departamentoPer");
-        String correoPersonal = request.getParameter("correoPer");
-        
+        String nombrePersonal = request.getParameter("nombrePers");
+        String apellidoPersonal = request.getParameter("apellidoPers");
+        String departamentoPersonal = request.getParameter("departamentoPers");
+        String correoPersonal = request.getParameter("correoPers");
+
         control.crearPersonal(nombrePersonal, apellidoPersonal, departamentoPersonal, correoPersonal);
         response.sendRedirect("index.jsp");
     }

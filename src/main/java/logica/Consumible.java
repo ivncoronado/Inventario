@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Consumible implements Serializable {
@@ -27,11 +26,7 @@ public class Consumible implements Serializable {
         this.tipoConsumible = tipoConsumible;
     }
 
-    Consumible(int id_consumible, String cantidadConsumible, String marcaConsumible, String tipoConsumible) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public int getId_consumible() {
+      public int getId_consumible() {
         return id_consumible;
     }
 

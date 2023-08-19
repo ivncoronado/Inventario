@@ -32,9 +32,9 @@ public class SvConsumible extends HttpServlet {
         listaConsumibles = control.getConsumibles();
         
         HttpSession misession =request.getSession();
-        misession.setAttribute("listaConnsumibles", listaConsumibles);
+        misession.setAttribute("listaConsumibles", listaConsumibles);
         
-        response.sendRedirect("VerConsumibles");
+        response.sendRedirect("verStock.jsp");
     }
 
     @Override

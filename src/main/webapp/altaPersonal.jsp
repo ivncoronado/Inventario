@@ -6,21 +6,21 @@
 <form class="user" action="SvPersonal"method="POST">
     <div class="form-group col">
         <div class="col-sm-6 mb-3 ">
-            <input type="text" class="form-control form-control-user" id="nombrePer"
+            <input type="text" class="form-control form-control-user" id="nombrePers" name="nombrePers"
                    placeholder="Nombre">
         </div>
         <div class="col-sm-6 mb-3">
-            <input type="text" class="form-control form-control-user" id="apellidoPer"
+            <input type="text" class="form-control form-control-user" id="apellidoPers" name="apellidoPers"
                    placeholder="Apellido">
         </div>
     <div class="form-group col">
         <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user"
-                   id="departamentoPer" placeholder="Departamento">
+                   id="departamentoPers" name="departamentoPers" placeholder="Departamento">
         </div>
         <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user"
-                   id="correoPer" placeholder="Correo">
+                   id="correoPers" name="correoPers" placeholder="Correo">
         </div>
     </div>
     <button class="btn btn-primary btn-user btn-block" type="submit">

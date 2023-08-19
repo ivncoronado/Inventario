@@ -27,6 +27,7 @@
                             <th>Apellido</th>
                             <th>Departamento</th>
                             <th>Correo</th>
+                            <th style=" width:210px">Acción </th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -36,6 +37,7 @@
                             <th>Apellido</th>
                             <th>Departamento</th>
                             <th>Correo</th>
+                            <th style=" width:210px">Acción </th>
                         </tr>
                     </tfoot>
                     <%
@@ -49,6 +51,20 @@
                             <td> <%=pers.getApellidoPers() %></td>
                             <td><%=pers.getDepartamentoPers() %></td>
                             <td><%=pers.getCorreoPers() %></td>
+                            <td style="display: flex; width: 230px;">
+                                <form name="eliminar" action="SvElimPersonal" method="POST">
+                                    <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: red; margin-right: 5px;">
+                                        <i class=" fas fa-trash-alt"></i> Eliminar
+                                    </button>
+                                    <input type="hidden" name="id" value="<%=pers.getId()%>">
+                                </form>
+                                <form name="editar" action="SvEditPersonal" method="POST">
+                                    <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: red; margin-right: 5px;">
+                                        <i class=" fas fa-pencil-alt"></i> Editar
+                                    </button>
+                                    <input type="hidden" name="id" value="<%=pers.getId()%>">
+                                </form>
+                            </td>
                         </tr>
                         <%}%>
                     </tbody>

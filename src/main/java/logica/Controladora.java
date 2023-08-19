@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import javax.persistence.metamodel.SingularAttribute;
-import static logica.Equipo_.modeloEquipo;
-import static logica.Equipo_.serieEquipo;
 import persistencia.ControladoraPersistencia;
 
 
